@@ -40,6 +40,6 @@ int	main()
 	char	fr[] = "dearenima";
 	char	re[] = "en";
 	printf("%s\n",ft_strnstr(fr, re, 10));
-	//printf("%s\n",strnstr(fr, re, 10));
+	printf("%s\n",strnstr(fr, re, 10));
 }
 
