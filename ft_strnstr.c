@@ -27,8 +27,8 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
                b++;
           }
           if (needle[b] == '\0')
-			  i = i - b;
-               return((char	*)&haystack[i]);
+			  //i = i - b;
+               return((char	*)&haystack[i - b]);
           b = 0;
           i++;
      }
@@ -40,6 +40,6 @@ int	main()
 	char	fr[] = "dearenima";
 	char	re[] = "en";
 	printf("%s\n",ft_strnstr(fr, re, 10));
-	printf("%s\n",strnstr(fr, re, 10));
+	//printf("%s\n",strnstr(fr, re, 10));
 }
 
