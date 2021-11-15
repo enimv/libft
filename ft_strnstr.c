@@ -6,7 +6,7 @@
 /*   By: aoueldma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 16:33:29 by aoueldma          #+#    #+#             */
-/*   Updated: 2021/11/12 23:30:47 by aoueldma         ###   ########.fr       */
+/*   Updated: 2021/11/15 15:19:58 by aoueldma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
                b++;
           }
           if (needle[b] == '\0')
-			  //i = i - b;
                return((char	*)&haystack[i - b]);
           b = 0;
           i++;
