@@ -6,7 +6,7 @@
 /*   By: aoueldma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 18:23:31 by aoueldma          #+#    #+#             */
-/*   Updated: 2021/11/15 21:28:17 by aoueldma         ###   ########.fr       */
+/*   Updated: 2021/11/16 20:49:33 by aoueldma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -15,17 +15,26 @@
 char	*ft_substr(char const	*s, unsigned int	start, size_t	len)
 {
 	int	i;
+	int	b;
 	char	*s2 = (char	*)s;
 
-	i = 0;
+	i  = 0;
+	b = 0;
+	s2 = malloc((len + 1) * sizeof(char));
 	while (i < start)
 		i++;
-	s2 = malloc(i * len);
-	return (&s2[i]);
+	while (i <= len)
+	{
+		s2[b] = s[i];
+		i++;
+		b++;
+	}
+	s2[b] = '\0';
+	return (s2);
 }
 
 int	main()
 {
-	char	pi[] = "enima";
-	printf("%s",ft_substr(pi,2,3));
+	char	pi[] = "dearenima";
+	printf("%s",ft_substr(pi,2,6));
 }
