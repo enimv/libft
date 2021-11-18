@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aoueldma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/15 18:23:31 by aoueldma          #+#    #+#             */
-/*   Updated: 2021/11/16 20:49:33 by aoueldma         ###   ########.fr       */
+/*   Created: 2021/11/16 21:20:36 by aoueldma          #+#    #+#             */
+/*   Updated: 2021/11/17 20:50:19 by aoueldma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -21,9 +21,10 @@ char	*ft_substr(char const	*s, unsigned int	start, size_t	len)
 	i  = 0;
 	b = 0;
 	s2 = malloc((len + 1) * sizeof(char));
-	while (i < start)
-		i++;
-	while (i <= len)
+	//while (i < start)
+	//	i++;
+	i = start;
+	while (i <= len + 1)
 	{
 		s2[b] = s[i];
 		i++;
@@ -35,6 +36,6 @@ char	*ft_substr(char const	*s, unsigned int	start, size_t	len)
 
 int	main()
 {
-	char	pi[] = "dearenima";
-	printf("%s",ft_substr(pi,2,6));
+	char	pi[] = "dearenima welcom";
+	printf("%s",ft_substr(pi,2,40));
 }

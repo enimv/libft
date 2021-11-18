@@ -6,7 +6,7 @@
 /*   By: aoueldma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 18:22:56 by aoueldma          #+#    #+#             */
-/*   Updated: 2021/11/16 19:07:48 by aoueldma         ###   ########.fr       */
+/*   Updated: 2021/11/17 23:49:30 by aoueldma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -20,37 +20,35 @@ size_t  ft_strlen(const char    *s)
         i++;
     return (i);
 }
+char	*start(char	*str, char	*set)
+{
+	int	i;
+	int	b;
 
+	i = 0;
+	b = 0;
+	while (set[b])
+	{
+		if (str[i] != set[b])
+			{
+				b++;
+			}
+		i++;
+	} 
+}
+			
 char	*ft_strtrim(char const	*s1, char const	*set)
 {
 	char	*gt;
-	int	i;
-	int	a;
-	int	c;
-
-	a = 0;
-	c = 0;
-	i = 0;
 	gt = malloc(((ft_strlen(s1) + ft_strlen(set)) + 1) * sizeof(char));
-	while (s1[i] != 0 || set[a] != 0)
+	while (s1[i] != set[b])
 	{
-		if (set [a] != s1[i])			
-		{
-			gt[c] = s1[i];
-			c++;
-			i++;
-		}
-		else
-			i++;
-		a++;
-	}
-	gt[c] = '\0';
-	return (gt);
-}
+		 
+
 
 int	main()
 {
-	char tr[] = "deeareniimat";
-	char ft[] = "eit";
-	printf("%s",ft_strtrim(tr,ft));
+    char tr[] = "//////test////";
+    char ft[] = "////";
+    printf("%s",ft_strtrim(tr,ft));
 }
