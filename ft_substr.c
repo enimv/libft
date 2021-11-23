@@ -6,12 +6,13 @@
 /*   By: aoueldma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 21:20:36 by aoueldma          #+#    #+#             */
-/*   Updated: 2021/11/17 20:50:19 by aoueldma         ###   ########.fr       */
+/*   Updated: 2021/11/20 02:29:42 by aoueldma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 char	*ft_substr(char const	*s, unsigned int	start, size_t	len)
 {
 	int	i;
@@ -21,10 +22,8 @@ char	*ft_substr(char const	*s, unsigned int	start, size_t	len)
 	i  = 0;
 	b = 0;
 	s2 = malloc((len + 1) * sizeof(char));
-	//while (i < start)
-	//	i++;
 	i = start;
-	while (i <= len + 1)
+	while (i <= len /* + 1*/)
 	{
 		s2[b] = s[i];
 		i++;
@@ -32,10 +31,4 @@ char	*ft_substr(char const	*s, unsigned int	start, size_t	len)
 	}
 	s2[b] = '\0';
 	return (s2);
-}
-
-int	main()
-{
-	char	pi[] = "dearenima welcom";
-	printf("%s",ft_substr(pi,2,40));
 }
