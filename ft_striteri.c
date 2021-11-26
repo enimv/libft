@@ -1,32 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aoueldma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/10 20:21:08 by aoueldma          #+#    #+#             */
-/*   Updated: 2021/11/26 00:26:24 by aoueldma         ###   ########.fr       */
+/*   Created: 2021/11/25 23:35:57 by aoueldma          #+#    #+#             */
+/*   Updated: 2021/11/26 00:09:58 by aoueldma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <string.h>
 #include <stdio.h>
-size_t	ft_strlen(const char	*s)
+void ft_striteri(char *s, void (*f)(unsigned int,char*))
 {
 	int	i;
 
 	i = 0;
-	while (s[i] != '\0')
+	if (s[i] == 0)
+		return ;
+	while (s[i])
+	{
+		f(i, &s[i]);
 		i++;
-	return (i);
+	}
 }
-int	main()
-{
-	int	i;
 
-	i = 0;
-	char fr[] = "hgd";
-	//printf("%lu\n", strlen(&fr[i]));
-	printf("%lu\n", ft_strlen(fr));
-	printf("%d\n",i);
+void	f(unsigned int	i, char	*s)
+{
+	*s -= 32;  
+}	
+
+int main()
+{
+	char s[] = "abcdef";
+	ft_striteri(s, f);
+	printf("%s", s);
 }
