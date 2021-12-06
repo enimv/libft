@@ -6,24 +6,13 @@
 /*   By: aoueldma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 22:03:37 by aoueldma          #+#    #+#             */
-/*   Updated: 2021/11/14 01:41:31 by aoueldma         ###   ########.fr       */
+/*   Updated: 2021/12/01 05:15:12 by aoueldma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-void	ft_bzero(void	*s, size_t	n)
-{
-	char	*a = s;
-	int	i;
-
-	i = 0;
-	while (i < n)
-	{
-		a[i] = '\0';
-		i++;
-	}
-}
+#include "libft.h"
 
 void *ft_calloc(size_t	count, size_t	size)
 {
@@ -35,7 +24,7 @@ void *ft_calloc(size_t	count, size_t	size)
 	return (p);
 }
 
-int	main()
+/*int	main()
 {
 	int	i;
 	int j = 0;
@@ -49,12 +38,12 @@ int	main()
 		printf("%d",gt[j]);
 		j++;
 	}
-	/*gt[i] = "dearenima";
+	gt[i] = "dearenima";
 	while (i > 0)
 	{
 		printf("%d",gt[i]);
 		i++;
 	}
-	*/
+	
 
-}
+}*/

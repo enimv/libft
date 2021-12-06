@@ -6,38 +6,65 @@
 /*   By: aoueldma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 21:20:36 by aoueldma          #+#    #+#             */
-/*   Updated: 2021/11/26 02:14:13 by aoueldma         ###   ########.fr       */
+/*   Updated: 2021/12/02 11:42:37 by aoueldma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "libft.h"
 
 char	*ft_substr(char const	*s, unsigned int	start, size_t	len)
 {
-	int	i;
-	int	b;
-	int	c;
-	char	*s2 = (char	*)s;
+	size_t	i;
+	char *s2;
 
 	i  = 0;
-	b = 0;
-	c = 0;
+	if (!s)
+		return (NULL);
+	if (start >= (ft_strlen(s)) || len == 0)
+		return(ft_strdup(""));
+	if (len > ft_strlen(s))
+		len = ft_strlen(s);
 	s2 = malloc((len + 1) * sizeof(char));
-	i = start;
-	while (c <= len)
+	if (!s2)
+		return (NULL);
+	while (i < len)
 	{
-		s2[b] = s[i];
+		s2[i] = s[start];
 		i++;
-		b++;
-		c++;
+		start++;
 	}
-	s2[b] = '\0';
+	s2[i] = '\0';
 	return (s2);
 }
-
-int	main()
+/*
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	gt [] = "hello dear enima";
-	printf("%s",ft_substr(gt,6,10));
+	char	*p;
+	size_t	i;
+
+	i = 0;
+	if (!s)
+		return (NULL);
+	if (start >= ft_strlen(s))
+		return (ft_strdup(""));
+	p = malloc(sizeof(char) * (len + 1));
+	if (!p)
+		return (NULL);
+	while (i < len)
+	{
+		p[i] = s[start + i];
+		i++;
+	}
+	p[i] = 0;
+	return (p);
 }
+
+*/
+
+/*int	main()
+{
+	char	gt [] = "x   xxxtripouille   xxx";
+	printf("%s",ft_substr(gt,7,16));
+}*/

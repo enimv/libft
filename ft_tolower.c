@@ -6,11 +6,11 @@
 /*   By: aoueldma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 23:01:37 by aoueldma          #+#    #+#             */
-/*   Updated: 2021/11/12 22:15:29 by aoueldma         ###   ########.fr       */
+/*   Updated: 2021/11/30 05:18:45 by aoueldma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
-int	tolower(int	c)
+int	ft_tolower(int	c)
 {
 	if (c >= 65 && c <= 90)
 	{
@@ -21,8 +21,8 @@ int	tolower(int	c)
 		return (c);
 }
 
-int main()
+/*int main()
 {
 	char tf = 'Y';
 	printf("%c",tolower(tf));
-}
+}*/

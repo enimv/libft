@@ -6,7 +6,7 @@
 /*   By: aoueldma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 23:08:39 by aoueldma          #+#    #+#             */
-/*   Updated: 2021/11/17 23:57:01 by aoueldma         ###   ########.fr       */
+/*   Updated: 2021/11/30 22:31:49 by aoueldma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -16,19 +16,27 @@ char	*ft_strchr(const char	*s, int	c)
 	int	i;
 
 	i = 0;
-	while (s[i] != c)
+	while (s[i] != (char) c)
 	{
-		if (s[i] == 0)
-			return (0);
+		if (s[i] == '\0')
+			return (NULL);
 		i++;
 	}
 	return ((char	*)&s[i]);
 }
 
-int	main()
+/*char *ft_strchr(const char *s, int c)
 {
-	char	fr[] = "rdeearenima";
-	char	hy = 'e';
-	printf("%s\n",ft_strchr(fr,hy));
-	printf("%s\n",strchr(fr,hy));
-}
+    while (*s != (char)c)
+        if (!*s++)
+            return 0;
+    return (char *)s;
+}*/
+
+/*int	main()
+{
+	char	fr[] = "tripouille";
+	char	hy = 't';
+	printf("%s\n",ft_strchr(fr,hy + 256));
+	printf("%s\n",strchr(fr,hy + 256));
+}*/

@@ -6,13 +6,13 @@
 /*   By: aoueldma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 19:30:00 by aoueldma          #+#    #+#             */
-/*   Updated: 2021/11/10 19:38:39 by aoueldma         ###   ########.fr       */
+/*   Updated: 2021/11/30 21:51:06 by aoueldma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include<stdio.h>
-int	isalpha(int	c)
+int	ft_isalpha(int	c)
 {
-	if (c >= 97 && c<= 122)
+	if ((c >= 97 && c<= 122) || (c >= 65 && c <= 90))
 		return (1);
 	else
 		return (0);

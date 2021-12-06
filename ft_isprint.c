@@ -6,13 +6,13 @@
 /*   By: aoueldma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 20:13:02 by aoueldma          #+#    #+#             */
-/*   Updated: 2021/11/10 20:20:24 by aoueldma         ###   ########.fr       */
+/*   Updated: 2021/12/02 15:36:08 by aoueldma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include<stdio.h>
-int	isprint(int	c)
+int	ft_isprint(int	c)
 {
-	if (c >= 32 && c <= 127)
+	if (c >= 32 && c < 127)
 		return (1);
 	else
 		return (0);

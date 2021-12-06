@@ -6,11 +6,11 @@
 /*   By: aoueldma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 18:55:29 by aoueldma          #+#    #+#             */
-/*   Updated: 2021/11/10 19:29:01 by aoueldma         ###   ########.fr       */
+/*   Updated: 2021/11/30 05:07:31 by aoueldma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
-int	isdigit(int	c)
+int	ft_isdigit(int	c)
 {
 	if (c >= 48 && c <= 57)
 		return (1);
