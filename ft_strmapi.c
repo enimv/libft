@@ -6,22 +6,9 @@
 /*   By: aoueldma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 00:07:15 by aoueldma          #+#    #+#             */
-/*   Updated: 2021/12/03 22:52:54 by aoueldma         ###   ########.fr       */
+/*   Updated: 2021/12/10 22:51:00 by aoueldma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*#include <stdio.h>
-#include <stdlib.h>
-
-size_t  ft_strlen(const char    *s)
-{
-    int i;
-
-    i = 0;
-    while (s[i] != '\0')
-        i++;
-    return (i);
-}
-*/
 #include "libft.h"
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -30,10 +17,12 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*alloc;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	len  = ft_strlen(s);
-	if (s[i] == 0)
-		return (ft_strdup(""));
 	alloc = malloc(sizeof(char) * len + 1);
+	if (!alloc)
+		return (NULL);
 	while (s[i])
 	{
 		alloc[i] = f(i,s[i]);
@@ -47,7 +36,7 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	return (c);
 }
-
+char yu[] = ""
 int	main()
 {
 	char	gt[] = "hello enima";

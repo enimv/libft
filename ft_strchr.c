@@ -6,7 +6,7 @@
 /*   By: aoueldma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 23:08:39 by aoueldma          #+#    #+#             */
-/*   Updated: 2021/11/30 22:31:49 by aoueldma         ###   ########.fr       */
+/*   Updated: 2021/12/10 00:51:48 by aoueldma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -16,7 +16,7 @@ char	*ft_strchr(const char	*s, int	c)
 	int	i;
 
 	i = 0;
-	while (s[i] != (char) c)
+	while (s[i] != (unsigned char)c)
 	{
 		if (s[i] == '\0')
 			return (NULL);
