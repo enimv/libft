@@ -6,39 +6,28 @@
 /*   By: aoueldma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 21:46:53 by aoueldma          #+#    #+#             */
-/*   Updated: 2021/12/10 22:40:31 by aoueldma         ###   ########.fr       */
+/*   Updated: 2021/12/11 02:24:40 by aoueldma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>
-void	*ft_memcpy(void* dst, const void* src, unsigned int cnt)
+#include "libft.h"
+
+void	*ft_memcpy(void *dst, const void *src, unsigned int cnt)
 {
 	unsigned int	i;
-    char *dest = (char *)dst;
-    const char *source =( const char*)src;
-    
+	char			*dest;
+	const char		*source;
+
 	i = 0;
+	dest = (char *)dst;
+	source = (char *)src;
 	if (dest == source)
 		return (dest);
 	if (dest == NULL && source == NULL)
 		return (NULL);
-	while(i < cnt)
-    {  
+	while (i < cnt)
+	{
 		dest[i] = source[i];
-        i++;
-    }
-    return (dst);
+		i++;
+	}
+	return (dst);
 }
-
-
- /*int main()
-{
-	char	ft[] = "";
-	char	tr[] = "fgfufuyfuy";
-	printf("%s\n", ft_memcpy(ft,tr,4));
-	//printf("%d",ft[0]);
-	printf("%s\n", memcpy(ft,tr,4));
-	//printf("%d",ft[0]);
-
-}
-*/

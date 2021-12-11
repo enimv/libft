@@ -6,13 +6,13 @@
 /*   By: aoueldma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 03:43:12 by aoueldma          #+#    #+#             */
-/*   Updated: 2021/12/04 03:49:54 by aoueldma         ###   ########.fr       */
+/*   Updated: 2021/12/11 02:33:15 by aoueldma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-void ft_putnbr_fd(int n, int fd)
+
+void	ft_putnbr_fd(int n, int fd)
 {
-	
 	if (n >= 0 && n <= 9)
 	{
 		ft_putchar_fd(n + 48, fd);

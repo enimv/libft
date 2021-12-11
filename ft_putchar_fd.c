@@ -6,11 +6,12 @@
 /*   By: aoueldma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 22:59:38 by aoueldma          #+#    #+#             */
-/*   Updated: 2021/12/04 00:14:43 by aoueldma         ###   ########.fr       */
+/*   Updated: 2021/12/11 02:30:37 by aoueldma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-void ft_putchar_fd(char c, int fd)
+
+void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }

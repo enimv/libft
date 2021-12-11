@@ -6,13 +6,13 @@
 /*   By: aoueldma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 22:58:01 by aoueldma          #+#    #+#             */
-/*   Updated: 2021/12/04 00:29:54 by aoueldma         ###   ########.fr       */
+/*   Updated: 2021/12/11 02:35:20 by aoueldma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_splitcpy(const char *s, char c, char **str, int alloc)
+static char	**ft_splitcpy(const char *s, char c, char **str, int alloc)
 {
 	int	i;
 	int	j;
@@ -41,7 +41,7 @@ char	**ft_splitcpy(const char *s, char c, char **str, int alloc)
 	return (str);
 }
 
-char	**ft_charcount(const char *s, char c, char **str, int alloc)
+static char	**ft_charcount(const char *s, char c, char **str, int alloc)
 {
 	int	i;
 	int	j;

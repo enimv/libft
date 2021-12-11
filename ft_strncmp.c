@@ -6,11 +6,11 @@
 /*   By: aoueldma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 23:12:56 by aoueldma          #+#    #+#             */
-/*   Updated: 2021/12/01 08:29:57 by aoueldma         ###   ########.fr       */
+/*   Updated: 2021/12/11 02:56:53 by aoueldma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
+
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
@@ -24,10 +24,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
-/*int	main()
-{
-	char fr[] = "€enima";
-	char en[] = "enima";
-	printf("%d",strncmp(fr, en, 3));
-}*/
