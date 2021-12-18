@@ -6,7 +6,7 @@
 /*   By: aoueldma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 23:35:57 by aoueldma          #+#    #+#             */
-/*   Updated: 2021/12/11 02:40:04 by aoueldma         ###   ########.fr       */
+/*   Updated: 2021/12/18 19:59:21 by aoueldma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -23,4 +23,9 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		f(i, &s[i]);
 		i++;
 	}
+}
+
+void	f(unsigned int	i, char	*str)
+{
+	*str += (i + 1) ;
 }

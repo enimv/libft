@@ -6,10 +6,11 @@
 /*   By: aoueldma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 03:43:12 by aoueldma          #+#    #+#             */
-/*   Updated: 2021/12/11 02:33:15 by aoueldma         ###   ########.fr       */
+/*   Updated: 2021/12/18 19:58:13 by aoueldma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+#include <fcntl.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {
